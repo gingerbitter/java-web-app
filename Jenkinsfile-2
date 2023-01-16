@@ -11,7 +11,7 @@ tools{
             steps {
                 echo 'Welcome to Jenkins pipeline'
                 git 'https://github.com/gingerbitter/Aulas-webtestcases.git'
-                emailext body: 'http://localhost:9000/dashboard?id=Aulas%3AAulasCare', compressLog: true, subject: 'Emailable Reports', to: 'nandini.priya@brigosha.com'
+                emailext body: 'This is the emailable reports http://localhost:9000/dashboard?id=Aulas%3AAulasCare', compressLog: true, subject: 'Emailable Reports', to: 'nandini.priya@brigosha.com'
             }
         }
         stage('Build code'){
