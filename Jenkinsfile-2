@@ -36,9 +36,12 @@ tools{
       steps {
         timeout(time: 2, unit: 'MINUTES') {
           waitForQualityGate abortPipeline: true
-          emailext body: 'This is the emailable reports http://localhost:9000/dashboard?id=Aulas%3AAulasCare', compressLog: true, subject: 'Emailable Reports', to: 'nandini.priya@brigosha.com'
+          
         }
       }
     }
+    stage('Email Notification'){
+    emailext body: 'This is the emailable reports for the sonarqube http://localhost:9000/dashboard?id=Aulas%3AAulasCare   Thanks', compressLog: true, subject: 'Emailable Reports', to: 'nandini.priya@brigosha.com'
+    } 
     }
 }
