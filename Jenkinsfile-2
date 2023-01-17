@@ -34,8 +34,7 @@ tools{
     }
     stage('Email Notification'){
       steps {
-    emailext body: 'This is the emailable reports for the sonarqube http://localhost:9000/dashboard?id=Aulas%3AAulasCare
-    Thanks', compressLog: true, subject: 'Emailable Reports', to: 'nandini.priya@brigosha.com'
+    emailext body: 'This is the emailable reports for the sonarqube http://localhost:9000/dashboard?id=Aulas%3AAulasCare  Thanks for the report', compressLog: true, subject: 'Emailable Reports', to: 'nandini.priya@brigosha.com'
     }
     }
     stage("Quality Gate") {
